@@ -7,14 +7,58 @@
 
 # hlsearch on (H) or off (h):
 ~h
+# Last Search Pattern:
+~MSle0~/sy
+
+# Last Substitute Search Pattern:
+~MSle0&\\"
+
+# Last Substitute String:
+$"
+
 # Command Line History (newest to oldest):
 :wq
+:nohl
 :w
 :q
-:WQ
-:W
+:109
+:39
+:90
+:59
+:50
+:62
+:pwd
+:43
+:reg
+:%s/\\"/"/gc
+:ls
+:%s/"\([^"]\)*$//gc
+:s/"\([^"]\)*$//gc
+:s/"[^"]*$//gc
+:q!
+:help clipboard
 
 # Search String History (newest to oldest):
+?/sy
+???
+?/set
+?/hlse
+? \<PROJECT_BASE\>
+?/endl
+? \<handleOption\>
+? \<_helpRequested\>
+?/cout
+?//
+?/ostr
+? \\"
+? "\([^"]\)*$
+?/"\([^"]\)*$
+?/func
+?/"
+? "[^"]*$
+?/"(?=[^"].*)
+?/"\(?=[^"].*\)
+?/".*\?$
 
 # Expression History (newest to oldest):
 
@@ -23,22 +67,123 @@
 # Input Line History (newest to oldest):
 
 # Registers:
-""1	LINE	0
-	xmodmap $HOME/.Xmodmap
+"0	LINE	0
+				app.logger().information(it->first + ": " + it->second);
+"1	LINE	0
+	"
+"2	LINE	0
+	V
+"3	LINE	0
+	is c++11?
+"4	LINE	0
+	can build as lib (no main) or w/o poco util server app
+"5	LINE	0
+	can build from non poco makefile, eg. include libs in std makefile
+"6	LINE	0
+	    auto x = 10;
+"7	LINE	0
+		int main(const std::vector<std::string>& args) {
+			//if (_helpRequested) {
+			//	displayHelp();
+			//}
+			//else {
+				// get parameters from configuration file
+				unsigned short port = (unsigned short) config().getInt("WebSocketServer.port", 9980);
+				
+				// set-up a server socket
+				ServerSocket svs(port);
+				// set-up a HTTPServer instance
+				HTTPServer srv(new RequestHandlerFactory, svs, new HTTPServerParams);
+				// start the HTTPServer
+				srv.start();
+				// wait for CTRL-C or kill
+				waitForTerminationRequest();
+				// Stop the HTTPServer
+				srv.stop();
+			//}
+			return Application::EXIT_OK;
+		}
+"8	LINE	0
+		}
+"9	LINE	0
+		/// To test the WebSocketServer you can use any web browser (http://localhost:9980/).
+"g	CHAR	0
+	
+""-	CHAR	0
+	"
 
 # File marks:
-'0  3  22  ~/.xmodmap
-'1  42  9  ~/sw/lib/poco/poco-1.4.7/Net/samples/WebSocketServer/src/test.html
-'2  117  15  ~/.bashrc
-'3  23  0  ~/.profile
+'0  31  8  ~/.vimrc
+'1  190  0  ~/.vimrc
+'2  182  12  ~/.vimrc
+'3  184  34  ~/.vimrc
+'4  183  23  ~/.vimrc
+'5  122  0  ~/.bashrc
+'6  1  51  ~/sw/workspaces/olap/olreplay/pages/svr/TODO
+'7  2  18  ~/sw/workspaces/olap/olreplay/pages/svr/makefile
+'8  161  4  ~/sw/workspaces/olap/olreplay/pages/svr/src/svr.cpp
+'9  43  66  ~/sw/workspaces/olap/olreplay/pages/svr/src/wss.cpp
 
 # Jumplist (newest first):
+-'  31  8  ~/.vimrc
+-'  26  0  ~/.vimrc
+-'  1  0  ~/.vimrc
+-'  190  0  ~/.vimrc
+-'  14  0  ~/.vimrc
+-'  12  12  ~/.vimrc
+-'  182  12  ~/.vimrc
+-'  23  0  ~/.vimrc
+-'  21  0  ~/.vimrc
+-'  184  34  ~/.vimrc
+-'  9  11  ~/.vimrc
+-'  183  23  ~/.vimrc
+-'  2  17  ~/.vimrc
+-'  20  0  ~/.vimrc
+-'  29  0  ~/.vimrc
+-'  16  0  ~/.vimrc
+-'  15  0  ~/.vimrc
+-'  13  0  ~/.vimrc
+-'  11  0  ~/.vimrc
+-'  10  0  ~/.vimrc
+-'  122  0  ~/.bashrc
+-'  1  0  ~/.bashrc
+-'  1  51  ~/sw/workspaces/olap/olreplay/pages/svr/TODO
+-'  2  18  ~/sw/workspaces/olap/olreplay/pages/svr/makefile
+-'  1  0  ~/sw/workspaces/olap/olreplay/pages/svr/makefile
+-'  161  4  ~/sw/workspaces/olap/olreplay/pages/svr/src/svr.cpp
+-'  171  5  ~/sw/workspaces/olap/olreplay/pages/svr/src/svr.cpp
+-'  105  0  ~/sw/workspaces/olap/olreplay/pages/svr/src/svr.cpp
+-'  1  0  ~/sw/workspaces/olap/olreplay/pages/svr/src/svr.cpp
+-'  43  66  ~/sw/workspaces/olap/olreplay/pages/svr/src/wss.cpp
+-'  1  0  ~/sw/workspaces/olap/olreplay/pages/svr/src/wss.cpp
+-'  32  29  ~/sw/workspaces/olap/olreplay/pages/svr/src/wss.cpp
+-'  135  21  ~/sw/workspaces/olap/olreplay/pages/svr/src/wss.cpp
+-'  134  6  ~/sw/workspaces/olap/olreplay/pages/svr/src/wss.cpp
+-'  109  20  ~/sw/workspaces/olap/olreplay/pages/svr/src/wss.cpp
+-'  172  7  ~/sw/workspaces/olap/olreplay/pages/svr/src/wss.cpp
+-'  107  0  ~/sw/workspaces/olap/olreplay/pages/svr/src/wss.cpp
+-'  176  3  ~/sw/workspaces/olap/olreplay/pages/svr/src/wss.cpp
+-'  76  0  ~/sw/workspaces/olap/olreplay/pages/svr/src/wss.cpp
+-'  75  0  ~/sw/workspaces/olap/olreplay/pages/svr/src/wss.cpp
+-'  55  61  ~/sw/workspaces/olap/olreplay/pages/svr/src/wss.cpp
+-'  50  109  ~/sw/workspaces/olap/olreplay/pages/svr/src/wss.cpp
+-'  59  34  ~/sw/workspaces/olap/olreplay/pages/svr/src/wss.cpp
+-'  33  33  ~/sw/workspaces/olap/olreplay/pages/svr/src/wss.cpp
+-'  16  0  ~/sw/workspaces/olap/olreplay/pages/svr/src/wss.cpp
+-'  31  0  ~/sw/workspaces/olap/olreplay/pages/svr/src/wss.cpp
+-'  7  1  ~/sw/workspaces/olap/olreplay/pages/svr/src/wss.cpp
+-'  96  7  ~/sw/lib/poco/poco-1.4.7/Net/samples/WebSocketServer/src/WebSocketServer.cpp
+-'  50  11  ~/sw/lib/poco/poco-1.4.7/Net/samples/WebSocketServer/src/WebSocketServer.cpp
+-'  6  22  ~/sw/lib/poco/poco-1.4.7/Net/samples/WebSocketServer/src/WebSocketServer.cpp
+-'  2  0  ~/sw/lib/poco/poco-1.4.7/Net/samples/WebSocketServer/src/WebSocketServer.cpp
+-'  3  0  ~/sw/lib/poco/poco-1.4.7/Net/samples/WebSocketServer/src/WebSocketServer.cpp
+-'  82  0  ~/sw/lib/poco/poco-1.4.7/Net/samples/WebSocketServer/src/WebSocketServer.cpp
+-'  83  2  ~/sw/lib/poco/poco-1.4.7/Net/samples/WebSocketServer/src/WebSocketServer.cpp
 -'  3  22  ~/.xmodmap
 -'  1  0  ~/.xmodmap
 -'  42  9  ~/sw/lib/poco/poco-1.4.7/Net/samples/WebSocketServer/src/test.html
 -'  1  0  ~/sw/lib/poco/poco-1.4.7/Net/samples/WebSocketServer/src/test.html
 -'  117  15  ~/.bashrc
--'  1  0  ~/.bashrc
 -'  23  0  ~/.profile
 -'  1  0  ~/.profile
 -'  23  0  ~/.profile
@@ -47,30 +192,6 @@
 -'  1  0  ~/.profile
 -'  23  0  ~/.profile
 -'  1  0  ~/.profile
--'  117  15  ~/.bashrc
--'  1  0  ~/.bashrc
--'  23  0  ~/.profile
--'  1  0  ~/.profile
--'  23  0  ~/.profile
--'  1  0  ~/.profile
--'  23  0  ~/.profile
--'  1  0  ~/.profile
--'  23  0  ~/.profile
--'  1  0  ~/.profile
--'  42  9  ~/sw/lib/poco/poco-1.4.7/Net/samples/WebSocketServer/src/test.html
--'  1  0  ~/sw/lib/poco/poco-1.4.7/Net/samples/WebSocketServer/src/test.html
--'  117  15  ~/.bashrc
--'  1  0  ~/.bashrc
--'  23  0  ~/.profile
--'  1  0  ~/.profile
--'  23  0  ~/.profile
--'  1  0  ~/.profile
--'  23  0  ~/.profile
--'  1  0  ~/.profile
--'  23  0  ~/.profile
--'  1  0  ~/.profile
--'  117  15  ~/.bashrc
--'  1  0  ~/.bashrc
 -'  23  0  ~/.profile
 -'  1  0  ~/.profile
 -'  23  0  ~/.profile
@@ -81,8 +202,6 @@
 -'  1  0  ~/.profile
 -'  42  9  ~/sw/lib/poco/poco-1.4.7/Net/samples/WebSocketServer/src/test.html
 -'  1  0  ~/sw/lib/poco/poco-1.4.7/Net/samples/WebSocketServer/src/test.html
--'  117  15  ~/.bashrc
--'  1  0  ~/.bashrc
 -'  23  0  ~/.profile
 -'  1  0  ~/.profile
 -'  23  0  ~/.profile
@@ -91,8 +210,6 @@
 -'  1  0  ~/.profile
 -'  23  0  ~/.profile
 -'  1  0  ~/.profile
--'  117  15  ~/.bashrc
--'  1  0  ~/.bashrc
 -'  23  0  ~/.profile
 -'  1  0  ~/.profile
 -'  23  0  ~/.profile
@@ -103,28 +220,342 @@
 -'  1  0  ~/.profile
 -'  42  9  ~/sw/lib/poco/poco-1.4.7/Net/samples/WebSocketServer/src/test.html
 -'  1  0  ~/sw/lib/poco/poco-1.4.7/Net/samples/WebSocketServer/src/test.html
--'  117  15  ~/.bashrc
--'  1  0  ~/.bashrc
--'  23  0  ~/.profile
--'  1  0  ~/.profile
--'  23  0  ~/.profile
--'  1  0  ~/.profile
--'  23  0  ~/.profile
--'  1  0  ~/.profile
--'  23  0  ~/.profile
--'  1  0  ~/.profile
--'  117  15  ~/.bashrc
--'  1  0  ~/.bashrc
--'  23  0  ~/.profile
--'  1  0  ~/.profile
--'  23  0  ~/.profile
--'  1  0  ~/.profile
--'  23  0  ~/.profile
--'  1  0  ~/.profile
 -'  23  0  ~/.profile
 -'  1  0  ~/.profile
 
 # History of marks within files (newest to oldest):
+
+> ~/.vimrc
+	"	31	8
+	^	26	0
+	.	190	0
+	+	180	0
+	+	181	12
+	+	191	0
+	+	183	0
+	+	185	1
+	+	185	0
+	+	181	0
+	+	183	23
+	+	185	0
+	+	184	34
+	+	182	12
+	+	191	0
+	+	186	17
+	+	187	127
+	+	188	129
+	+	189	128
+	+	190	10
+	+	187	0
+	+	188	0
+	+	187	0
+	+	188	0
+	+	189	0
+	+	190	0
+
+> ~/.bashrc
+	"	122	0
+	^	117	16
+	.	117	16
+	+	117	41
+	+	118	0
+	+	117	16
+
+> ~/sw/workspaces/olap/olreplay/pages/svr/TODO
+	"	1	51
+	^	1	52
+	.	1	51
+	+	1	48
+	+	1	46
+	+	1	66
+	+	1	54
+	+	1	8
+	+	1	51
+
+> ~/sw/workspaces/olap/olreplay/pages/svr/makefile
+	"	2	18
+	^	2	19
+	.	2	18
+	+	1	4
+	+	2	18
+
+> ~/sw/workspaces/olap/olreplay/pages/svr/src/svr.cpp
+	"	161	4
+	.	161	0
+	+	50	96
+	+	59	28
+	+	90	25
+	+	39	3
+	+	109	20
+	+	104	0
+	+	100	3
+	+	188	1
+	+	107	64
+	+	116	1
+	+	123	3
+	+	107	21
+	+	149	0
+	+	155	29
+	+	161	30
+	+	170	34
+	+	171	4
+	+	183	0
+	+	171	18
+	+	172	25
+	+	173	49
+	+	174	13
+	+	175	43
+	+	176	21
+	+	177	36
+	+	178	38
+	+	179	50
+	+	180	24
+	+	181	38
+	+	172	0
+	+	173	0
+	+	174	0
+	+	176	0
+	+	177	0
+	+	178	0
+	+	179	0
+	+	180	0
+	+	181	0
+	+	182	0
+	+	154	18
+	+	170	62
+	+	171	57
+	+	175	0
+	+	161	0
+
+> ~/sw/lib/poco/poco-1.4.7/build/rules/global
+	"	61	3
+
+> ~/sw/workspaces/olap/olreplay/pages/svr/Makefile
+	"	13	5
+	^	13	20
+	.	13	0
+	+	11	12
+	+	13	0
+	a	13	17
+
+> ~/sw/workspaces/olap/olreplay/pages/svr/src/wss.cpp
+	"	43	66
+	^	43	67
+	.	43	66
+	+	176	0
+	+	1	0
+	+	4	0
+	+	7	0
+	+	5	0
+	+	11	1
+	+	12	1
+	+	13	1
+	+	176	0
+	+	17	0
+	+	31	1
+	+	32	1
+	+	33	1
+	+	31	2
+	+	31	0
+	+	33	0
+	+	31	2
+	+	31	1
+	+	32	0
+	+	31	0
+	+	34	0
+	+	36	0
+	+	36	56
+	+	35	0
+	+	36	29
+	+	37	0
+	+	38	77
+	+	40	5
+	+	47	5
+	+	52	4
+	+	53	0
+	+	57	33
+	+	60	22
+	+	61	4
+	+	64	3
+	+	65	3
+	+	66	3
+	+	43	0
+	+	42	4
+	+	43	55
+	+	49	5
+	+	50	118
+	+	55	0
+	+	54	4
+	+	55	49
+	+	58	4
+	+	59	34
+	+	43	67
+	+	50	109
+	+	55	61
+	+	176	0
+	+	76	0
+	+	81	3
+	+	82	3
+	+	83	21
+	+	91	4
+	+	92	15
+	+	96	0
+	+	95	4
+	+	96	10
+	+	97	22
+	+	92	33
+	+	97	34
+	+	102	3
+	+	103	4
+	+	106	0
+	+	176	0
+	+	107	0
+	+	174	0
+	+	175	0
+	+	107	59
+	+	94	88
+	+	107	59
+	+	109	41
+	+	112	19
+	+	116	35
+	+	121	20
+	+	125	39
+	+	134	69
+	+	141	19
+	+	149	47
+	+	150	21
+	+	153	6
+	+	125	2
+	+	147	3
+	+	172	2
+	+	151	0
+	+	167	3
+	+	43	66
+
+> ~/sw/lib/poco/poco-1.4.7/Net/samples/WebSocketServer/src/WebSocketServer.cpp
+	"	96	7
+	^	6	23
+	.	6	22
+	+	83	0
+	+	83	0
+	+	3	0
+	+	1	0
+	+	2	0
+	+	6	22
+
+> ~/sw/workspaces/olap/olreplay/pages/page1.html
+	"	33	16
+	^	33	17
+	.	33	16
+	+	5	43
+	+	6	21
+	+	7	51
+	+	8	25
+	+	9	108
+	+	10	50
+	+	11	32
+	+	12	61
+	+	13	35
+	+	14	60
+	+	15	37
+	+	16	57
+	+	17	75
+	+	18	51
+	+	19	41
+	+	20	60
+	+	21	41
+	+	21	70
+	+	21	41
+	+	21	36
+	+	21	39
+	+	21	36
+	+	21	91
+	+	21	36
+	+	21	34
+	+	21	42
+	+	21	30
+	+	21	29
+	+	21	50
+	+	21	95
+	+	21	30
+	+	21	30
+	+	37	0
+	+	1	0
+	+	2	0
+	+	3	0
+	+	4	0
+	+	5	0
+	+	6	0
+	+	7	0
+	+	8	0
+	+	9	0
+	+	10	0
+	+	11	0
+	+	12	0
+	+	13	0
+	+	14	0
+	+	15	0
+	+	16	0
+	+	17	0
+	+	18	0
+	+	19	0
+	+	20	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	21	0
+	+	1	5
+	+	2	5
+	+	37	0
+	+	3	0
+	+	4	0
+	+	7	0
+	+	7	15
+	+	21	3
+	+	7	3
+	+	8	3
+	+	21	3
+	+	7	2
+	+	8	2
+	+	21	1
+	+	8	26
+	+	21	2
+	+	4	0
+	+	7	0
+	+	7	15
+	+	27	0
+	+	9	22
+	+	9	0
+	+	10	5
+	+	9	41
+	+	7	0
+	+	9	0
+	+	10	0
+	+	3	17
+	+	12	39
+	+	34	51
+	+	33	16
+
+> /usr/share/vim/vim74/doc/help.txt
+	"	49	8
+
+> /usr/share/vim/vim74/doc/windows.txt
+	"	1196	4
+
+> /usr/share/vim/vim74/doc/gui.txt
+	"	471	21
 
 > ~/.xmodmap
 	"	3	22
@@ -181,14 +612,6 @@
 	+	40	9
 	+	41	10
 	+	42	9
-
-> ~/.bashrc
-	"	117	15
-	^	117	16
-	.	117	16
-	+	117	41
-	+	118	0
-	+	117	16
 
 > ~/.profile
 	"	23	0

@@ -177,3 +177,14 @@ set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
 set wrap!
+
+set hlsearch
+set incsearch
+hi Search guibg='Yellow' guifg='NONE'
+hi Visual guifg='White' guibg='Blue' gui=none
+
+if has("autocmd")
+  au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
+  au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
+  au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
+endif
