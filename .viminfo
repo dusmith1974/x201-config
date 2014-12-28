@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/sy
+~MSle0~/Found
 
 # Last Substitute Search Pattern:
 ~MSle0&\\"
@@ -18,9 +18,9 @@ $"
 
 # Command Line History (newest to oldest):
 :wq
+:q
 :nohl
 :w
-:q
 :109
 :39
 :90
@@ -39,6 +39,10 @@ $"
 :help clipboard
 
 # Search String History (newest to oldest):
+?/Found
+?/4
+?/4.7
+?/debug
 ?/sy
 ???
 ?/set
@@ -55,10 +59,6 @@ $"
 ?/"\([^"]\)*$
 ?/func
 ?/"
-? "[^"]*$
-?/"(?=[^"].*)
-?/"\(?=[^"].*\)
-?/".*\?$
 
 # Expression History (newest to oldest):
 
@@ -113,18 +113,30 @@ $"
 	"
 
 # File marks:
-'0  31  8  ~/.vimrc
-'1  190  0  ~/.vimrc
-'2  182  12  ~/.vimrc
-'3  184  34  ~/.vimrc
-'4  183  23  ~/.vimrc
-'5  122  0  ~/.bashrc
-'6  1  51  ~/sw/workspaces/olap/olreplay/pages/svr/TODO
-'7  2  18  ~/sw/workspaces/olap/olreplay/pages/svr/makefile
-'8  161  4  ~/sw/workspaces/olap/olreplay/pages/svr/src/svr.cpp
-'9  43  66  ~/sw/workspaces/olap/olreplay/pages/svr/src/wss.cpp
+'0  117  40  ~/.bashrc
+'1  71  0  ~/sw/poco/poco-1.6.0/Makefile
+'2  1  0  ~/sw/poco/poco-1.6.0/Makefile
+'3  128  0  ~/sw/poco/poco-1.6.0/Makefile
+'4  31  8  ~/.vimrc
+'5  190  0  ~/.vimrc
+'6  182  12  ~/.vimrc
+'7  184  34  ~/.vimrc
+'8  183  23  ~/.vimrc
+'9  122  0  ~/.bashrc
 
 # Jumplist (newest first):
+-'  117  40  ~/.bashrc
+-'  1  0  ~/.bashrc
+-'  71  0  ~/sw/poco/poco-1.6.0/Makefile
+-'  69  25  ~/sw/poco/poco-1.6.0/Makefile
+-'  68  0  ~/sw/poco/poco-1.6.0/Makefile
+-'  56  12  ~/sw/poco/poco-1.6.0/Makefile
+-'  55  12  ~/sw/poco/poco-1.6.0/Makefile
+-'  54  12  ~/sw/poco/poco-1.6.0/Makefile
+-'  53  12  ~/sw/poco/poco-1.6.0/Makefile
+-'  30  13  ~/sw/poco/poco-1.6.0/Makefile
+-'  1  0  ~/sw/poco/poco-1.6.0/Makefile
+-'  128  0  ~/sw/poco/poco-1.6.0/Makefile
 -'  31  8  ~/.vimrc
 -'  26  0  ~/.vimrc
 -'  1  0  ~/.vimrc
@@ -146,7 +158,6 @@ $"
 -'  11  0  ~/.vimrc
 -'  10  0  ~/.vimrc
 -'  122  0  ~/.bashrc
--'  1  0  ~/.bashrc
 -'  1  51  ~/sw/workspaces/olap/olreplay/pages/svr/TODO
 -'  2  18  ~/sw/workspaces/olap/olreplay/pages/svr/makefile
 -'  1  0  ~/sw/workspaces/olap/olreplay/pages/svr/makefile
@@ -183,7 +194,6 @@ $"
 -'  1  0  ~/.xmodmap
 -'  42  9  ~/sw/lib/poco/poco-1.4.7/Net/samples/WebSocketServer/src/test.html
 -'  1  0  ~/sw/lib/poco/poco-1.4.7/Net/samples/WebSocketServer/src/test.html
--'  117  15  ~/.bashrc
 -'  23  0  ~/.profile
 -'  1  0  ~/.profile
 -'  23  0  ~/.profile
@@ -211,19 +221,19 @@ $"
 -'  23  0  ~/.profile
 -'  1  0  ~/.profile
 -'  23  0  ~/.profile
--'  1  0  ~/.profile
--'  23  0  ~/.profile
--'  1  0  ~/.profile
--'  23  0  ~/.profile
--'  1  0  ~/.profile
--'  23  0  ~/.profile
--'  1  0  ~/.profile
--'  42  9  ~/sw/lib/poco/poco-1.4.7/Net/samples/WebSocketServer/src/test.html
--'  1  0  ~/sw/lib/poco/poco-1.4.7/Net/samples/WebSocketServer/src/test.html
--'  23  0  ~/.profile
--'  1  0  ~/.profile
 
 # History of marks within files (newest to oldest):
+
+> ~/.bashrc
+	"	117	40
+	^	117	41
+	.	117	40
+	+	117	41
+	+	118	0
+	+	117	40
+
+> ~/sw/poco/poco-1.6.0/Makefile
+	"	71	0
 
 > ~/.vimrc
 	"	31	8
@@ -252,14 +262,6 @@ $"
 	+	188	0
 	+	189	0
 	+	190	0
-
-> ~/.bashrc
-	"	122	0
-	^	117	16
-	.	117	16
-	+	117	41
-	+	118	0
-	+	117	16
 
 > ~/sw/workspaces/olap/olreplay/pages/svr/TODO
 	"	1	51

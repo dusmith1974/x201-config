@@ -114,7 +114,7 @@ if ! shopt -oq posix; then
 fi
 
 export BOOST_DIR=/usr/include
-export POCO_BASE=~/sw/lib/poco/poco-1.4.7
+export POCO_BASE=~/sw/lib/poco/poco-1.6.0
 export LC_ALL=C
 
 export PATH=$PATH:$HOME/sw/workspaces/template
