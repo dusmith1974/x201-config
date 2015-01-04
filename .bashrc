@@ -116,6 +116,7 @@ fi
 export BOOST_DIR=/usr/include
 export POCO_BASE=~/sw/lib/poco/poco-1.6.0
 export LC_ALL=C
+export PATH=~/bin:$PATH
 
 export PATH=$PATH:$HOME/sw/workspaces/template
 
