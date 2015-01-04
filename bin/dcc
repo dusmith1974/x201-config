@@ -1,0 +1,1 @@
+for i in cc c++ gcc g++; do ln -s  `which distcc` ~/bin/$i; done
