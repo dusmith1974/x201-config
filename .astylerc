@@ -1,15 +1,16 @@
 # AStyle options file for google styleguide like cc projectis.
-
+#
 # Disable inline code
 # // *INDENT-OFF*
 # ...
 # // *INDENT-ON*
 # ... // *NOPAD*
-
+#
 keep-one-line-blocks
 keep-one-line-statements
-
+#
 style=google
+suffix=none
 #recursive *.cc *.h
 indent-modifiers
 indent=spaces=2
@@ -17,20 +18,19 @@ attach-namespaces
 attach-classes
 attach-inlines
 attach-extern-c
-
+#
 indent-switches
 #indent-cases
-
-delete-empty-lines
-
+#
+#
 align-pointer=type
 align-reference=type
-
+#
 remove-brackets
 convert-tabs
 close-templates
 max-code-length=80
 mode=c
 lineend=linux
-
+#
 #dry-run
